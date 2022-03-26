@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 200px;
+  text-align: center;
+}
+
+.clock {
+  padding: 10px;
+  background-color: blue;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.block {
+  width: 40px;
+  height: 40px;
+  font-size: 50px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+.number {
+  width: 40px;
+  line-height: 40px;
+  font-family: digital, arial, verdana;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: moveup 1s steps(10, end) infinite;
+          animation: moveup 1s steps(10, end) infinite;
+}
+
+.colon {
+  width: 40px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+#btns label {
+  cursor: pointer;
+  padding: 5px 10px;
+  background: #eeeeee;
+  font-size: 20px;
+  border-radius: 0 0 3px 3px;
+}
+
+input[name="btn"] {
+  display: none;
+}
+
+#stop:checked ~ .clock .number {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+#start:checked ~ .clock .number {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+#reset:checked ~ .clock .number {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.moveten {
+  -webkit-animation: moveten 1s steps(10, end) infinite;
+          animation: moveten 1s steps(10, end) infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.movesix {
+  -webkit-animation: movesix 1s steps(6, end) infinite;
+          animation: movesix 1s steps(6, end) infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.oneSeconds {
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.tenSeconds {
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+}
+
+.oneMinutes {
+  -webkit-animation-duration: 600s;
+          animation-duration: 600s;
+}
+
+.tenMinutes {
+  -webkit-animation-duration: 3600s;
+          animation-duration: 3600s;
+}
+
+.oneHours {
+  -webkit-animation-duration: 36000s;
+          animation-duration: 36000s;
+}
+
+.tenHours {
+  -webkit-animation-duration: 360000s;
+          animation-duration: 360000s;
+}
+
+@-webkit-keyframes move {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -400px;
+  }
+}
+
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -400px;
+  }
+}
+
+@-webkit-keyframes moveten {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -400px;
+  }
+}
+
+@keyframes moveten {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -400px;
+  }
+}
+
+@-webkit-keyframes movesix {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -240px;
+  }
+}
+
+@keyframes movesix {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -240px;
+  }
+}
+/*# sourceMappingURL=styleUp.css.map */

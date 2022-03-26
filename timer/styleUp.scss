@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 200px;
+    text-align: center;
+}
+
+.clock {
+    padding: 10px;
+    background-color:blue;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.block {
+    width: 40px;
+    height: 40px;
+    font-size: 50px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+.number {
+    width: 40px;
+    line-height: 40px;
+    font-family: digital, arial, verdana;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveup 1s steps(10, end) infinite;
+}
+
+.colon {
+    width: 40px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+#btns label {
+    cursor: pointer;
+    padding: 5px 10px;
+    background: #eeeeee;
+    font-size: 20px;
+    border-radius: 0 0 3px 3px;
+}
+
+input[name="btn"] {
+    display: none;
+}
+
+#stop:checked~.clock .number {
+    animation-play-state: paused;
+}
+
+#start:checked~.clock .number {
+    animation-play-state: running;
+}
+
+#reset:checked~.clock .number {
+    animation: none;
+}
+
+.moveten {
+    animation: moveten 1s steps(10, end) infinite;
+    animation-play-state: paused;
+}
+
+.movesix {
+    animation: movesix 1s steps(6, end) infinite;
+    animation-play-state: paused;
+}
+
+.oneSeconds {
+    animation-duration: 10s;
+}
+
+.tenSeconds {
+    animation-duration: 60s;
+}
+
+.oneMinutes {
+    animation-duration: 600s;
+}
+
+.tenMinutes {
+    animation-duration: 3600s;
+}
+
+.oneHours {
+    animation-duration: 36000s;
+}
+
+.tenHours {
+    animation-duration: 360000s;
+}
+
+@keyframes move {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -400px;
+    }
+}
+
+@keyframes moveten {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -400px;
+    }
+
+}
+
+@keyframes movesix {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -240px;
+    }
+}
